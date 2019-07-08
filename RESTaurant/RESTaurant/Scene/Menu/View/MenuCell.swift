@@ -13,6 +13,7 @@ class MenuCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var itemImageView: UIImageView!
     
     var menuItem: MenuItem? = nil {
         didSet {

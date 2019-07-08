@@ -22,6 +22,6 @@ class WebService {
             }
             
             completion(data, error)
-        }
+        }.resume()
     }
 }

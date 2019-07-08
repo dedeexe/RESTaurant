@@ -17,6 +17,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        requestItems()
     }
     
     // --------------------------------------------------
@@ -50,11 +51,55 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.navigationBar.isHidden = false
         menuTableView.dataSource = self
         menuTableView.delegate = self
+        menuTableView.separatorStyle = .none
     }
     
     func reload() {
         DispatchQueue.main.async { [weak self] in
             self?.menuTableView.reloadData()
         }
+    }
+    
+    func requestItems() {
+        let request = createRequest()
+        webService.execute(request: request) { [weak self] (data, error) in
+            if let error = error as NSError? {
+                let message = error.description
+                print(message)
+            }
+            
+            if let unwrappedData = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(MenuList.self, from: unwrappedData)
+                    self?.menuItems = result.itens ?? []
+                } catch {
+                    print(error.localizedDescription)
+                    self?.menuItems = []
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------------
+    // MARK: - Requests
+    // --------------------------------------------------
+    
+    func createRequest() -> URLRequest {
+        switch menuType {
+        case .disserts:
+            return makeDissertRequest()
+        case .dinners:
+            return makeDissertRequest()
+        case .drinks:
+            return makeDissertRequest()
+        }
+    }
+    
+    func makeDissertRequest() -> URLRequest {
+        let url = URL(string: "https://demo6005775.mockable.io/menu/desserts")
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "GET"
+        return urlRequest
     }
 }
