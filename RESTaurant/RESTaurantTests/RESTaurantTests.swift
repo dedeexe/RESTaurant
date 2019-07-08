@@ -1,11 +1,3 @@
-//
-//  RESTaurantTests.swift
-//  RESTaurantTests
-//
-//  Created by dede.exe on 07/07/19.
-//  Copyright © 2019 dede.exe. All rights reserved.
-//
-
 import XCTest
 @testable import RESTaurant
 
