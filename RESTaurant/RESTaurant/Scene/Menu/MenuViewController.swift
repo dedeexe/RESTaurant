@@ -6,6 +6,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var menuType = MenuType.dinners
     
+    let webService = WebService()
+    
     private var menuItems: [MenuItem] = [] {
         didSet {
             self.reload()
