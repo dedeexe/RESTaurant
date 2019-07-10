@@ -4,10 +4,8 @@
 ---?color=linear-gradient(90deg, #B266FF 50%, white 50%)
 @title[Customize Slide Layout]
 
-### Fazendo um pedido em um restaurante
-
 @snap[west span-50]
-## Customize the Layout
+### Fazendo um pedido em um restaurante
 @snapend
 
 @snap[east span-50]
