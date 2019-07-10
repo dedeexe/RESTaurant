@@ -1,10 +1,18 @@
 # iOS
 ### Acessando WebServices
 
-+++
-
+---?color=linear-gradient(90deg, #B266FF 50%, white 50%)
+@title[Customize Slide Layout]
 
 ### Fazendo um pedido em um restaurante
+
+@snap[west span-50]
+## Customize the Layout
+@snapend
+
+@snap[east span-50]
+![](assets/img/presentation.png)
+@snapend
 
 ![](assets/img/restaurant_cycle.png)
 
