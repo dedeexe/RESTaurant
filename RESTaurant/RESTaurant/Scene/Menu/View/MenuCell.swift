@@ -15,6 +15,9 @@ class MenuCell: UITableViewCell {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var itemImageView: UIImageView!
     
+    @IBOutlet private weak var containerView : UIView!
+    @IBOutlet private weak var shadowView : UIView!
+    
     var menuItem: MenuItem? = nil {
         didSet {
             self.update()
@@ -24,6 +27,7 @@ class MenuCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.reset()
+        self.setup()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,6 +37,7 @@ class MenuCell: UITableViewCell {
     override func prepareForReuse() {
         reset()
     }
+    
 
     // --------------------------------------------------
     // MARK: - Helpers
@@ -47,7 +52,22 @@ class MenuCell: UITableViewCell {
     private func update() {
         self.nameLabel.text = menuItem?.name
         self.detailLabel.text = menuItem?.description
-        self.priceLabel.text = String(menuItem?.price ?? 0.0)
+        self.priceLabel.text = formatedNumber(menuItem?.price ?? 0.0)
+    }
+    
+    func setup() {
+        containerView.layer.cornerRadius = 8.0
+        containerView.layer.masksToBounds = true
+        shadowView.layer.shadowRadius = 8.0
+        shadowView.layer.shadowOpacity = 50
+        shadowView.layer.shadowColor = UIColor.black.cgColor
+    }
+    
+    func formatedNumber(_ number:Double) -> String? {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale.current
+        formatter.numberStyle = .currency
+        return formatter.string(from: NSNumber(value: number))
     }
 
 }

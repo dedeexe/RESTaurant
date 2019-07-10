@@ -19,46 +19,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGK-Sc-CJA">
-                                <rect key="frame" x="25" y="308" width="364" height="280"/>
+                                <rect key="frame" x="25" y="243" width="364" height="330.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-q3-NBB">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="364" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="2OE-dI-PwY"/>
                                         </constraints>
-                                        <state key="normal" title="Comidas"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Comidas">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showDinners" destination="BYZ-38-t0r" eventType="touchUpInside" id="enp-wz-jQ6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-n6-WOq">
-                                        <rect key="frame" x="0.0" y="110" width="364" height="60"/>
+                                        <rect key="frame" x="0.0" y="186.5" width="364" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="GFf-Qb-Ict"/>
                                         </constraints>
-                                        <state key="normal" title="Bebidas"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Bebidas">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showDrinks" destination="BYZ-38-t0r" eventType="touchUpInside" id="CGX-6Q-LZ2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kiq-WT-lCZ">
-                                        <rect key="frame" x="0.0" y="220" width="364" height="60"/>
+                                        <rect key="frame" x="0.0" y="270.5" width="364" height="60"/>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="dy2-dk-gct"/>
                                         </constraints>
-                                        <state key="normal" title="Sobremesas"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Sobremesas">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="showDisserts" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4A-Lh-vhO"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESTaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-Zs-Lsi">
+                                        <rect key="frame" x="64" y="0.0" width="236" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                        <color key="textColor" white="0.43151576772739719" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="bLD-Zs-Lsi" firstAttribute="centerX" secondItem="ZGK-Sc-CJA" secondAttribute="centerX" id="4cd-WY-Zf9"/>
                                     <constraint firstAttribute="trailing" secondItem="jSv-n6-WOq" secondAttribute="trailing" id="5ev-x1-7zZ"/>
-                                    <constraint firstItem="Kiq-WT-lCZ" firstAttribute="top" secondItem="jSv-n6-WOq" secondAttribute="bottom" constant="50" id="CHa-E1-ZPa"/>
-                                    <constraint firstItem="jSv-n6-WOq" firstAttribute="top" secondItem="6Zv-q3-NBB" secondAttribute="bottom" constant="50" id="Wdg-m0-M9E"/>
+                                    <constraint firstItem="Kiq-WT-lCZ" firstAttribute="top" secondItem="jSv-n6-WOq" secondAttribute="bottom" constant="24" id="CHa-E1-ZPa"/>
+                                    <constraint firstItem="bLD-Zs-Lsi" firstAttribute="top" secondItem="ZGK-Sc-CJA" secondAttribute="top" id="OcC-zY-J38"/>
+                                    <constraint firstItem="jSv-n6-WOq" firstAttribute="top" secondItem="6Zv-q3-NBB" secondAttribute="bottom" constant="24" id="Wdg-m0-M9E"/>
                                     <constraint firstItem="jSv-n6-WOq" firstAttribute="leading" secondItem="ZGK-Sc-CJA" secondAttribute="leading" id="XmQ-0G-Q74"/>
-                                    <constraint firstItem="6Zv-q3-NBB" firstAttribute="top" secondItem="ZGK-Sc-CJA" secondAttribute="top" id="bqR-V4-5rh"/>
+                                    <constraint firstItem="6Zv-q3-NBB" firstAttribute="top" secondItem="bLD-Zs-Lsi" secondAttribute="bottom" constant="50" id="cen-sU-c0a"/>
                                     <constraint firstAttribute="trailing" secondItem="6Zv-q3-NBB" secondAttribute="trailing" id="gFF-dQ-gJJ"/>
                                     <constraint firstAttribute="bottom" secondItem="Kiq-WT-lCZ" secondAttribute="bottom" id="gYc-aw-vP4"/>
                                     <constraint firstItem="6Zv-q3-NBB" firstAttribute="leading" secondItem="ZGK-Sc-CJA" secondAttribute="leading" id="h86-bE-0uW"/>
@@ -71,7 +106,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZGK-Sc-CJA" secondAttribute="trailing" constant="25" id="278-h3-UDf"/>
                             <constraint firstItem="ZGK-Sc-CJA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="HSg-hu-tCE"/>
-                            <constraint firstItem="ZGK-Sc-CJA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hun-86-pnM"/>
+                            <constraint firstItem="ZGK-Sc-CJA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="hun-86-pnM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -103,8 +138,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="360.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2K-Rc-gc7">
+                                                    <rect key="frame" x="24" y="23" width="366" height="315"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dha-wG-Luj">
-                                                    <rect key="frame" x="20" y="11" width="374" height="339"/>
+                                                    <rect key="frame" x="20" y="19" width="374" height="323"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="hqH-s7-HzT">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
@@ -131,7 +170,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="bks-Fn-iLM" secondAttribute="trailing" constant="16" id="22t-c6-kRM"/>
                                                         <constraint firstItem="hqH-s7-HzT" firstAttribute="top" secondItem="dha-wG-Luj" secondAttribute="top" id="2GL-Ic-5Gp"/>
@@ -150,17 +189,23 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dha-wG-Luj" firstAttribute="top" secondItem="qwg-eV-epp" secondAttribute="topMargin" id="P7B-oK-K9e"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dha-wG-Luj" secondAttribute="bottom" id="Ucs-dk-kfs"/>
+                                                <constraint firstItem="b2K-Rc-gc7" firstAttribute="top" secondItem="dha-wG-Luj" secondAttribute="top" constant="4" id="0rS-bM-DFc"/>
+                                                <constraint firstItem="dha-wG-Luj" firstAttribute="top" secondItem="qwg-eV-epp" secondAttribute="topMargin" constant="8" id="P7B-oK-K9e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dha-wG-Luj" secondAttribute="bottom" constant="8" id="Ucs-dk-kfs"/>
+                                                <constraint firstItem="b2K-Rc-gc7" firstAttribute="bottom" secondItem="dha-wG-Luj" secondAttribute="bottom" constant="-4" id="W1q-aw-SSI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dha-wG-Luj" secondAttribute="trailing" id="Yqh-xn-vZJ"/>
                                                 <constraint firstItem="dha-wG-Luj" firstAttribute="leading" secondItem="qwg-eV-epp" secondAttribute="leadingMargin" id="tHd-YD-GuJ"/>
+                                                <constraint firstItem="b2K-Rc-gc7" firstAttribute="trailing" secondItem="dha-wG-Luj" secondAttribute="trailing" constant="-4" id="uqi-RF-qsr"/>
+                                                <constraint firstItem="b2K-Rc-gc7" firstAttribute="leading" secondItem="dha-wG-Luj" secondAttribute="leading" constant="4" id="vJN-0K-JGa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="containerView" destination="dha-wG-Luj" id="y7l-1B-dXA"/>
                                             <outlet property="detailLabel" destination="fmp-eb-bwd" id="BJy-ta-l9P"/>
                                             <outlet property="itemImageView" destination="hqH-s7-HzT" id="wkz-BN-wku"/>
                                             <outlet property="nameLabel" destination="bks-Fn-iLM" id="CjC-4g-j1P"/>
                                             <outlet property="priceLabel" destination="PN6-lb-GTX" id="WGq-Yu-7oh"/>
+                                            <outlet property="shadowView" destination="b2K-Rc-gc7" id="lgJ-6r-GLp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

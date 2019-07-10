@@ -39,6 +39,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let menuItem = self.menuItems[indexPath.row]
         cell.menuItem = menuItem
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -73,7 +74,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Implementar a criação do request
         
         // Implementar a execução do request e o tratamento da resposta
-
+        
     }
     
 }
