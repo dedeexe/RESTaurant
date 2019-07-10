@@ -1,9 +1,10 @@
 # iOS
-## Acessando WebServices
+### Acessando WebServices
 
----
++++
 
-## O Caso do restaurante
+
+### Fazendo um pedido em um restaurante
 
 ![](assets/img/restaurant_cycle.png)
 
