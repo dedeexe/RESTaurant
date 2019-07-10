@@ -158,6 +158,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="detailLabel" destination="fmp-eb-bwd" id="BJy-ta-l9P"/>
+                                            <outlet property="itemImageView" destination="hqH-s7-HzT" id="wkz-BN-wku"/>
                                             <outlet property="nameLabel" destination="bks-Fn-iLM" id="CjC-4g-j1P"/>
                                             <outlet property="priceLabel" destination="PN6-lb-GTX" id="WGq-Yu-7oh"/>
                                         </connections>

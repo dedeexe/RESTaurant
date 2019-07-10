@@ -60,64 +60,20 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    // ------------------------------------------------------------------
+    // Development Point: 02
+    // ------------------------------------------------------------------
+    //
+    // Desenvolver método para requisitar ítens do menu e tratar
+    //  resposta devolvida pelo WebService
+    //
+    
     func requestItems() {
-        guard let request = createRequest() else {
-            return
-        }
         
-        webService.execute(request: request) { [weak self] (data, error) in
-            if let error = error as NSError? {
-                let message = error.description
-                print(message)
-            }
-            
-            if let unwrappedData = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let result = try decoder.decode(MenuList.self, from: unwrappedData)
-                    self?.menuItems = result.itens ?? []
-                } catch {
-                    print(error.localizedDescription)
-                    self?.menuItems = []
-                }
-            }
-        }
-    }
+        //Implementar a criação do request
+        
+        // Implementar a execução do request e o tratamento da resposta
 
-    // --------------------------------------------------
-    // MARK: - Requests
-    // --------------------------------------------------
-    
-    func createRequest() -> URLRequest? {
-        switch menuType {
-        case .disserts:
-            return makeDissertRequest()
-        case .dinners:
-            return makeDinnersRequest()
-        case .drinks:
-            return makeDrinksRequest()
-        }
-    }
-    
-    func makeDissertRequest() -> URLRequest {
-        let url = URL(string: "https://demo6005775.mockable.io/menu/desserts")
-        var urlRequest = URLRequest(url: url!)
-        urlRequest.httpMethod = "GET"
-        return urlRequest
-    }
-    
-    func makeDinnersRequest() -> URLRequest {
-        let url = URL(string: "https://demo6005775.mockable.io/menu/dinners")
-        var urlRequest = URLRequest(url: url!)
-        urlRequest.httpMethod = "GET"
-        return urlRequest
-    }
-    
-    func makeDrinksRequest() -> URLRequest {
-        let url = URL(string: "https://demo6005775.mockable.io/menu/drinks")
-        var urlRequest = URLRequest(url: url!)
-        urlRequest.httpMethod = "GET"
-        return urlRequest
     }
     
 }
