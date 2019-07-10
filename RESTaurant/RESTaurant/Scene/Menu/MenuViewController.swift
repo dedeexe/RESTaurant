@@ -61,7 +61,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func requestItems() {
-        let request = createRequest()
+        guard let request = createRequest() else {
+            return
+        }
+        
         webService.execute(request: request) { [weak self] (data, error) in
             if let error = error as NSError? {
                 let message = error.description
@@ -85,14 +88,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - Requests
     // --------------------------------------------------
     
-    func createRequest() -> URLRequest {
+    func createRequest() -> URLRequest? {
         switch menuType {
         case .disserts:
             return makeDissertRequest()
         case .dinners:
-            return makeDissertRequest()
+            return nil
         case .drinks:
-            return makeDissertRequest()
+            return nil
         }
     }
     
