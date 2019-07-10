@@ -93,9 +93,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         case .disserts:
             return makeDissertRequest()
         case .dinners:
-            return nil
+            return makeDinnersRequest()
         case .drinks:
-            return nil
+            return makeDrinksRequest()
         }
     }
     
@@ -105,4 +105,19 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         urlRequest.httpMethod = "GET"
         return urlRequest
     }
+    
+    func makeDinnersRequest() -> URLRequest {
+        let url = URL(string: "https://demo6005775.mockable.io/menu/dinners")
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "GET"
+        return urlRequest
+    }
+    
+    func makeDrinksRequest() -> URLRequest {
+        let url = URL(string: "https://demo6005775.mockable.io/menu/drinks")
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "GET"
+        return urlRequest
+    }
+    
 }
